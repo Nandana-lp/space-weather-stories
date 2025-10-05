@@ -1,0 +1,39 @@
+{% extends 'stories/base.html' %}
+
+{% block title %}Space Weather Stories{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Sidebar for stories -->
+    <aside class="sidebar">
+        <h2>Stories</h2>
+        <ul>
+            {% for story in stories %}
+                <li>
+                    <a href="{{ story.pk }}/">{{ story.title }}</a> by {{ story.author }}
+                </li>
+            {% empty %}
+                <li>No stories yet.</li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <!-- Main content for APOD -->
+    <section class="main-content">
+        <h2>NASA APOD of the Day</h2>
+        {% if apod %}
+            <div class="apod-card">
+                <h3>{{ apod.title }} ({{ apod.date }})</h3>
+                {% if apod.media_type == "image" %}
+                    <img src="{{ apod.url }}" alt="{{ apod.title }}">
+                {% else %}
+                    <a href="{{ apod.url }}">Watch Video</a>
+                {% endif %}
+                <p>{{ apod.explanation }}</p>
+            </div>
+        {% else %}
+            <p>No APOD available right now.</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

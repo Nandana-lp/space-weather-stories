@@ -1,0 +1,150 @@
+/* Reset and minimalistic vibe */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* soft light grey */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: #1b1b2f; /* deep space-like navy */
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #1b1b2f;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6b6b; /* subtle accent */
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+h2 {
+    margin: 25px 0 15px;
+    font-size: 1.8rem;
+    color: #1b1b2f;
+    border-bottom: 2px solid #ff6b6b;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+/* Container with sidebar and main content */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* responsive */
+    gap: 20px;
+}
+
+/* Sidebar for stories */
+.sidebar {
+    flex: 1 1 250px; /* width ~250px min */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+    height: fit-content; /* adjust height to content */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sidebar li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(255,107,107,0.5);
+}
+
+.sidebar a {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Main content for APOD */
+.main-content {
+    flex: 3 1 600px; /* larger than sidebar */
+}
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background: rgba(255, 107, 107, 0.5);
+    color: #fff;
+}

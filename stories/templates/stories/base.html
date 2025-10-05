@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Space Weather Stories{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'stories/style.css' %}">
+</head>
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Add more for effect -->
+    <header>
+        <h1>🌌 Space Weather Stories</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 Space Weather Project</p>
+    </footer>
+</body>
+</html>

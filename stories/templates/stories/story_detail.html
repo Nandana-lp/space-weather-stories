@@ -1,0 +1,17 @@
+{% extends 'stories/base.html' %}
+
+{% block title %}{{ story.title }}{% endblock %}
+
+{% block content %}
+<!-- Back button at top -->
+<a href="/" class="back-button">← Back to Main Page</a>
+
+<div class="story-card">
+    <h2>{{ story.title }}</h2>
+    <h4>by {{ story.author }}</h4>
+    {% if story.image %}
+        <img src="{{ story.image.url }}" alt="{{ story.title }}">
+    {% endif %}
+    <p>{{ story.content }}</p>
+</div>
+{% endblock %}
